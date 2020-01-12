@@ -1,5 +1,4 @@
 const ui = new firebaseui.auth.AuthUI(firebase.auth());
-var provider = new firebase.auth.GoogleAuthProvider();
 
 // 2) These are our configurations.
 const uiConfig = {
