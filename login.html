@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+
+<body>
+    <div id="firebaseui-auth-container">
+        <!-- This is where the Login ui will load -->
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyB1Yu4m2PqMi-Xb0CNW2JxC8yf8oUbfOIE",
+            authDomain: "auth-js-ay.firebaseapp.com",
+            databaseURL: "https://auth-js-ay.firebaseio.com",
+            projectId: "auth-js-ay",
+            storageBucket: "auth-js-ay.appspot.com",
+            messagingSenderId: "611795756753",
+            appId: "1:611795756753:web:deca5d53fd638879c687f0"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- Firebase UI -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+
+    <script src=”https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+        var provider = new firebase.auth.GoogleAuthProvider();
+        provider.addScope('profile');
+        provider.addScope('email');
+        provider.addScope('https://www.googleapis.com/auth/plus.me');
+                firebase.auth().signInWithPopup(provider); // Opens a popup window and returns a promise to handle errors.
+    </script>
+    <script src="/js/auth.js"></script>
+</body>
+
+</html>
