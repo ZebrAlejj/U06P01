@@ -36,15 +36,6 @@
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 
-
-    <script src=”https://apis.google.com/js/platform.js" async defer></script>
-    <script>
-        var provider = new firebase.auth.GoogleAuthProvider();
-        provider.addScope('profile');
-        provider.addScope('email');
-        provider.addScope('https://www.googleapis.com/auth/plus.me');
-                firebase.auth().signInWithPopup(provider); // Opens a popup window and returns a promise to handle errors.
-    </script>
     <script src="/js/auth.js"></script>
 </body>
 
